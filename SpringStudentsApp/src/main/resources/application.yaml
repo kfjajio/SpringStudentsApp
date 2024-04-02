@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/student_db
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update # Параметр ddl-auto указывает на действие, которое будет выполнено над базой данных. "create" создаст схему приложения при запуске.
+
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true # Показывает SQL-запросы в логе. Удобно для отладки.
+    properties:
+      hibernate:
+        format_sql: true # Параметр format_sql форматирует вывод SQL-запросов в логе для удобства чтения.
